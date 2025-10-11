@@ -10,5 +10,10 @@ class Program
 		WriteLine(laptop.GetDescription());
 		var support = new ServiceProduct("Technical Support", 300m, 30);
 		WriteLine(support.GetDescription());
+
+		var product = new Product("Mouse Gamer", 300);
+		var productDto = ProductAdapter.ToDto(product);
+
+		WriteLine($"Product DTO - Name: {productDto.Name}, Price: {productDto.Price}, Code: {productDto.Code}");
 	}
 }
