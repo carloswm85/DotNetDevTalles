@@ -28,6 +28,9 @@ class Program
 
 		// MÉTODOS ASÍNCRONOS
 		var firstProduct = await new ProductRepository().GetProduct(1);
-		WriteLine($"{firstProduct.Name} - {firstProduct.Price}"); 
+		firstProduct.Description = "This is the description of the first product";
+
+		AttributeProcessor.ApplyUpperCase(firstProduct);
+		WriteLine($"{firstProduct.Name} - {firstProduct.Price:C} - {firstProduct.Description}");
 	}
 }
