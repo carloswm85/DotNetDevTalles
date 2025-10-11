@@ -7,7 +7,6 @@ public class Product : IProduct
 	public decimal Price { get; set; }
 	public bool IsAvailable { get; set; }
 	public DateTime CreatedAt { get; set; }
-	public DateTime? UpdatedAt { get; set; }
 	public Guid UniqueCode { get; set; }
 
 	public Product(string name, decimal price)
@@ -27,8 +26,24 @@ public class Product : IProduct
 		var discountAmount = Price * discount / 100;
 		Price -= discountAmount;
 	}
-	public string GetDescription()
+	public virtual string GetDescription()
 	{
-		return $"Name: {Name}, Price: {Price:C}, Available: {IsAvailable}, Created At: {CreatedAt}, Updated At: {UpdatedAt}, Unique Code: {UniqueCode}";
+
+		return $"Name: {Name}, Price: {Price:C}, Available: {IsAvailable}, Created At: {CreatedAt}, Unique Code: {UniqueCode}";
+	}
+}
+
+class ServiceProduct : Product
+{
+	public int DurationInDays { get; set; }
+
+	public ServiceProduct(string name, decimal price, int duration) : base(name, price)
+	{
+		DurationInDays = duration;
+	}
+
+	public override string GetDescription()
+	{
+		return $"{base.GetDescription()}, Duration: {DurationInDays} days";
 	}
 }
