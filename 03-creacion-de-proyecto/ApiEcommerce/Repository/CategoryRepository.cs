@@ -1,6 +1,6 @@
 using ApiEcommerce.Repository.IRepository;
 
-namespace ApiCommerce.Repository;
+namespace ApiEcommerce.Repository;
 
 public class CategoryRepository : ICategoryRepository
 {
@@ -39,10 +39,9 @@ public class CategoryRepository : ICategoryRepository
 		return _dbContext.Categories.OrderBy(c => c.Name).ToList();
 	}
 
-	public Category GetCategory(int id)
+	public Category? GetCategory(int id)
 	{
-		return _dbContext.Categories.FirstOrDefault(c => c.Id == id) ??
-			throw new InvalidOperationException($"Category with id {id} was not found");
+		return _dbContext.Categories.FirstOrDefault(c => c.Id == id);
 	}
 
 	public bool Save()

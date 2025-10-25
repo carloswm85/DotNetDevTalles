@@ -1,7 +1,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace ApiCommerce.Models.Dtos;
+namespace ApiEcommerce.Models.Dtos;
 
 public class CreateCategoryDto
 {

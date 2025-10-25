@@ -1,8 +1,8 @@
 
-using ApiCommerce.Models.Dtos;
+using ApiEcommerce.Models.Dtos;
 using AutoMapper;
 
-namespace ApiCommerce.Mapping;
+namespace ApiEcommerce.Mapping;
 
 public class CategoryProfile : Profile
 {
