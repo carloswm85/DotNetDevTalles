@@ -12,3 +12,5 @@
 - <https://code.visualstudio.com/docs/csharp/package-management>
 - <https://medium.com/@rictorres.uyu/automapper-vs-mapster-a-comparative-analysis-for-net-developers-77d8dba4942f>
 - <https://learn.microsoft.com/es-mx/aspnet/core/web-api/?view=aspnetcore-8.0#return-values>
+- Relationships:
+  - <https://learn.microsoft.com/en-us/ef/core/modeling/relationships>

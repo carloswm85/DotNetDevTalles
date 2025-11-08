@@ -1,3 +1,4 @@
+using ApiEcommerce.Models;
 using ApiEcommerce.Repository.IRepository;
 
 namespace ApiEcommerce.Repository;

@@ -3,12 +3,35 @@
 	// Hover to view descriptions of existing attributes.
 	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
+	"compounds": [
+		{
+			"name": "🚀 ApiEcommerce Client Launch",
+			"stopAll": true,
+			"presentation": {
+				"hidden": false,
+				"group": "Main group",
+				"order": 1
+			},
+			"configurations": [
+				"1st - C#: ApiCommerce Debug",
+				"2nd - Launch Edge"
+			]
+		}
+	],
 	"configurations": [
 		{
-			"name": "C#: ApiCommerce Debug",
+			"name": "1st - C#: ApiCommerce Debug",
 			"type": "dotnet",
 			"request": "launch",
 			"projectPath": "${workspaceFolder}/ApiEcommerce/ApiEcommerce.csproj"
-		}
+		},
+		{
+			"name": "2nd - Launch Edge",
+			"request": "launch",
+			"type": "msedge",
+			"url": "http://localhost:5109/swagger/index.html",
+			"webRoot": "${workspaceFolder}",
+			"cleanUp": "wholeBrowser",
+		},
 	]
 }

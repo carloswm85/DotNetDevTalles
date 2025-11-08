@@ -1,4 +1,5 @@
 using System.Net.Http.Headers;
+using ApiEcommerce.Models;
 using ApiEcommerce.Models.Dtos;
 using ApiEcommerce.Repository.IRepository;
 using AutoMapper;
