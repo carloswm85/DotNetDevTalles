@@ -96,13 +96,17 @@ public class ProductRepository : IProductRepository
 		return _db.SaveChanges() >= 0;
 	}
 
-	public ICollection<Product> SearchProduct(string name)
+	public ICollection<Product> SearchProducts(string searchTerm)
 	{
 		IQueryable<Product> query = _db.Products;
 
-		if (!string.IsNullOrEmpty(name))
+		if (!string.IsNullOrEmpty(searchTerm))
 		{
-			query = query.Where(p => p.Name.ToLower().Trim() == name.ToLower().Trim());
+			var term = searchTerm.Trim().ToLower();
+			query = query
+				.Include(p => p.Category)
+				.Where(p => p.Name.ToLower().Trim().Contains(term) ||
+							p.Description.ToLower().Trim().Contains(term));
 		}
 		return query.OrderBy(p => p.Name).ToList();
 	}
