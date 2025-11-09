@@ -24,11 +24,15 @@
 | 16  | Publicando API en Azure                                    | 8        | 37 min      | [open](./16-publicando-api-en-azure/README.md)                   |
 | 17  | Fin del curso                                              | 1        | 2 min       | [open](./17-fin-del-curso/README.md)                             |
 
-## Course Description
+---
+
+## Course Description (ENG)
 
 This course provides a complete, hands-on guide to building a professional RESTful API from scratch using **.NET Core 8**. Throughout 17 modules, you’ll learn how to design and implement backend systems with **Entity Framework Core**, apply **JWT-based authentication and role-based authorization**, and follow best practices such as the **repository pattern**, **API versioning**, and **pagination**. You’ll also configure **SQL Server databases**, add **image upload functionality**, and finally **deploy your API to Azure**, simulating a real production environment.
 
-## [SPA] Conceptos Clave
+---
+
+## Conceptos Clave (SPA)
 
 Sin descripción: Sección 01
 
